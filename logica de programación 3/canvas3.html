@@ -1,0 +1,16 @@
+
+
+<canvas width="600" height="400"></canvas>
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+pincel.fillStyle = "red"
+pincel.fillRect(0,0,600,400);
+function exhibirAlerta(){
+    alert("Hiciste click");}
+    console.log(evento);
+
+pantalla.onclick = exhibirAlerta;
+
+</script>
