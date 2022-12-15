@@ -1,8 +1,50 @@
-<meta charset="utf8">
+
 <script>
-alert("echale buevos mi vida")
-alert("te adoro chulada")
-alert("me haces un chanwis?")
-alert("nocierto hahaha")
-alert("marcelaaaaaaaaaaaaaaa")
+// define the Item class to store information about a single item
+class Item {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+
+// define the Cart class to store items and calculate the total cost
+class Cart {
+  constructor() {
+    this.items = [];
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  getTotal() {
+    let total = 0;
+    for (let item of this.items) {
+      total += item.price;
+    }
+    return total;
+  }
+}
+
+// define the point-of-sale function that takes a list of items and returns the total cost
+function pointOfSale(items) {
+  let cart = new Cart();
+  for (let item of items) {
+    cart.addItem(item);
+  }
+  return cart.getTotal();
+}
+
+// create a few items and add them to the cart
+let item1 = new Item("apple", 0.5);
+let item2 = new Item("banana", 0.25);
+let item3 = new Item("pear", 0.75);
+
+let items = [item1, item2, item3];
+
+// calculate the total cost of the items in the cart
+let total = pointOfSale(items);
+
+console.log(`Total cost: ${total}`);
 </script>
