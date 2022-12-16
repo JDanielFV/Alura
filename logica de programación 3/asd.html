@@ -1,50 +1,45 @@
-
-<script>
-// define the Item class to store information about a single item
-class Item {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
+<div class="div"><p>Buenas Tardes Preciosa</p></div>
+<div class="div-2">Eres mi adoración chulada</div>
+<div class="div-3">da click aquí para inseminarte</div>
+<style>
+  .div {
+    display: flex;
+    max-width: 1008px;
+    height: 267px;
+    width: 1280px;
+    background-color: rgba(255, 154, 233, 1);
+    color: rgba(0, 0, 0, 1);
+    font-size: 74px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 89px;
+    padding-left: 0px;
+    margin-right: -1px;
+    padding-right: 0px;
+    margin-left: 47px;
   }
-}
-
-// define the Cart class to store items and calculate the total cost
-class Cart {
-  constructor() {
-    this.items = [];
+  .div-2 {
+    max-width: 1046px;
+    color: rgba(0, 0, 0, 1);
+    font-size: 94px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
   }
-
-  addItem(item) {
-    this.items.push(item);
+  .div-3 {
+    display: flex;
+    max-width: 211px;
+    height: 84px;
+    width: 203px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 154, 233, 1);
+    color: rgba(0, 0, 0, 1);
+    font-size: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 21px;
   }
-
-  getTotal() {
-    let total = 0;
-    for (let item of this.items) {
-      total += item.price;
-    }
-    return total;
-  }
-}
-
-// define the point-of-sale function that takes a list of items and returns the total cost
-function pointOfSale(items) {
-  let cart = new Cart();
-  for (let item of items) {
-    cart.addItem(item);
-  }
-  return cart.getTotal();
-}
-
-// create a few items and add them to the cart
-let item1 = new Item("apple", 0.5);
-let item2 = new Item("banana", 0.25);
-let item3 = new Item("pear", 0.75);
-
-let items = [item1, item2, item3];
-
-// calculate the total cost of the items in the cart
-let total = pointOfSale(items);
-
-console.log(`Total cost: ${total}`);
-</script>
+</style>
